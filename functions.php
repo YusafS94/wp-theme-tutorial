@@ -3,9 +3,22 @@
 function yusaf_theme_support() {
     // Adds dynamic title tag support
     add_theme_support('title-tag');
+    add_theme_support('custom-logo');
+    add_theme_support('post-thumbnails');
 }
 
 add_action('after_setup_theme','yusaf_theme_support');
+
+function yusaf_menus() {
+    $locations = array(
+        'primary' => "Desktop Primary Left Sidebar",
+        'footer' => "Footer Menu Items"
+    );
+
+    register_nav_menus($locations);
+}
+
+add_action('init','yusaf_menus');
 
 function yusaf_register_styles(){
     $version = wp_get_theme()->get('Version');
