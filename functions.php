@@ -41,4 +41,64 @@ function yusaf_register_scripts(){
 
 add_action('wp_enqueue_scripts', 'yusaf_register_scripts');
 
+function yusaf_widget_areas(){
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            // 'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
+            'before_widget' => '',
+            // 'after_widget' => '</ul>',
+            'after_widget' => '',
+            'name' => 'Sidebar Area',
+            'id' => 'sidebar-1',
+            'description' => 'Sidebar Widget Area'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            // 'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
+            'before_widget' => '',
+            // 'after_widget' => '</ul>',
+            'after_widget' => '',
+            'name' => 'Footer Widget Area 1',
+            'id' => 'footer-1',
+            'description' => 'Footer Widget Area'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            // 'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
+            'before_widget' => '',
+            // 'after_widget' => '</ul>',
+            'after_widget' => '',
+            'name' => 'Footer Widget Area 2',
+            'id' => 'footer-2',
+            'description' => 'Footer Widget Area'
+        )
+    );
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            // 'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
+            'before_widget' => '',
+            // 'after_widget' => '</ul>',
+            'after_widget' => '',
+            'name' => 'Footer Widget Area 3',
+            'id' => 'footer-3',
+            'description' => 'Footer Widget Area'
+        )
+    );
+}
+
+add_action('widgets_init', 'yusaf_widget_areas');
+
+
 ?>
